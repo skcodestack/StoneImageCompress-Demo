@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_image_select"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/image_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff261f1f">
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#800a0909">
+        <TextView
+            android:id="@+id/btn_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="预览"
+            android:layout_marginLeft="20dp"
+            style="@style/media_chooser_btn"
+            android:enabled="true"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/btn_query"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="确定"
+            android:textSize="20sp"
+            style="@style/media_chooser_btn"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"/>
+        <TextView
+            android:id="@+id/tv_count_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:textSize="20sp"
+            style="@style/media_chooser_btn"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>

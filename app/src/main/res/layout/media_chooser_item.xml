@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<github.com.stoneimagecompress.view.SquareFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <github.com.stoneimagecompress.view.SquareImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/miss_default_error"
+        />
+    <View
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/media_selector_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:padding="5dp"
+        android:src="@drawable/media_chooser_ic"
+        />
+    <LinearLayout
+        android:id="@+id/camera_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_media_chooser_take_pictrue"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="#cdcece"
+            android:textSize="14sp"
+            android:text="拍照"/>
+
+
+    </LinearLayout>
+
+</github.com.stoneimagecompress.view.SquareFrameLayout>
