@@ -41,7 +41,7 @@ libjpeg库源码
 
 ## 3.编写代码
 
-###3.1 把动态库和头文件添加到我们项目中
+### 3.1 把动态库和头文件添加到我们项目中
 
 <img src="/photo/imagecompress01.png" width="32%" />
 
