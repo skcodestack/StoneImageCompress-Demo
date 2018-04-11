@@ -1,8 +1,8 @@
 # StoneImageCompress-Demo
-#Android使用JPEG实现图片压缩上传#
+## Android使用JPEG实现图片压缩上传
 
 
-##1.介绍
+## 1.介绍
 
 Android中常用压缩方法分为2种：一种是降采样率压缩，另外一种是质量压缩。
 
@@ -25,7 +25,7 @@ Android中常用压缩方法分为2种：一种是降采样率压缩，另外一
 
 今天我们就来使用jpeg的方式来进行对图片压缩：
 
-##2.编码前准备工作
+## 2.编码前准备工作
 
 
 ndk工具包下载可以到http://www.androiddevtools.cn/ 下载解压就行了
@@ -39,13 +39,13 @@ libjpeg库源码
 		ndk-build APP_ABI=armeabi-v7a,armeabi 
 
 
-##3.编写代码
+## 3.编写代码
 
 ###3.1 把动态库和头文件添加到我们项目中
 
 <img src="/photo/imagecompress01.png" width="32%" />
 
-###3.2编写java层代码
+### 3.2编写java层代码
 
 	public class ImageUtil {
 
@@ -71,13 +71,13 @@ libjpeg库源码
     public static native int compressBitmap(Bitmap bitmap, int quality, String dstFile,boolean  optimize);
 
 
-###3.3生成头文件
+### 3.3生成头文件
 
 	javah -classpath . -jni github.com.androidadvanced_ndk.util.ImageUtil
 
-###3.4 编写cmake和配置gradle
+### 3.4 编写cmake和配置gradle
 
-####cmake:
+#### cmake:
 
 		
 
@@ -121,7 +121,7 @@ libjpeg库源码
 
 
 
-####build.gradle
+#### build.gradle
 
 		ndk{
             abiFilters "armeabi-v7a" ,"armeabi"
@@ -134,7 +134,7 @@ libjpeg库源码
     	}	
 
 
-###3.5编写c代码
+### 3.5编写c代码
 
 		
 
@@ -298,7 +298,7 @@ libjpeg库源码
 		
 		            *data=b;
 		            *(data+1)=g;
-		            *(data+2)=g;
+		            *(data+2)=r;
 		
 		            //data只存rgb
 		            data+=3;
@@ -334,7 +334,7 @@ libjpeg库源码
 
 
 
-###3.6使用
+### 3.6使用
 
 		//线程安全
     	CopyOnWriteArrayList<String> compressImageList=new CopyOnWriteArrayList<>();
@@ -368,12 +368,12 @@ libjpeg库源码
 
 下面我们来看下效果
 
-###<font color=red>压缩前</font>
+### <font color=red>压缩前</font>
 
 <img src="/photo/imagecompress02.jpg" width="32%" />
 
 
-###<font color=red>压缩后</font>
+### <font color=red>压缩后</font>
 <img src="/photo/imagecompress01.jpg" width="32%" />
 
 
