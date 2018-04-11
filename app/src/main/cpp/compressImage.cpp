@@ -158,7 +158,8 @@ JNIEXPORT jint JNICALL Java_github_com_stoneimagecompress_util_ImageUtil_compres
 
             *data=b;
             *(data+1)=g;
-            *(data+2)=g;
+            *(data+2)=r;
+//            LOGI("------------------>here is changed");
 
             //data只存rgb
             data+=3;

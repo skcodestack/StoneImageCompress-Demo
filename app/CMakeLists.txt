@@ -14,7 +14,7 @@ find_library(graphics jnigraphics)
 
 add_library(    libjpeg
                 SHARED
-                 IMPORTED )
+                IMPORTED )
 
 
 set_target_properties(  libjpeg
